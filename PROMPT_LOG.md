@@ -50,3 +50,32 @@ This log documents the structured, step-by-step prompts used to architect, imple
 - **Goal:** Finalize GitHub Pages relative build configuration and create judge-ready documentation (`README.md` and `PROMPT_LOG.md`).
 - **Scope:** `vite.config.js`, `package.json`, `README.md`, `PROMPT_LOG.md`
 - **Outcome:** Confirmed `base: './'` static build configuration, enriched `package.json` metadata, authored `README.md` and `PROMPT_LOG.md`, and verified `dist/index.html` builds cleanly with relative `./assets/...` paths.
+
+---
+
+### Prompt 8 — Local Git Identity & Safe `.gitignore`
+- **Goal:** Initialize the local Git repository safely, exclude dependencies/build artifacts/secrets, and inspect GitHub CLI availability.
+- **Scope:** `.gitignore`, local `.git/config`
+- **Outcome:** Initialized `main`, configured local Git identity (`Himesh275`), updated `.gitignore` (excluding `node_modules/`, `dist/`, `.env`, `.env.*`, `.DS_Store`, and editor caches), verified exclusions via `git check-ignore`, and confirmed `gh` CLI was not installed so the repository URL could be connected directly.
+
+---
+
+### Prompt 9 — Initial Commit & Push to GitHub (`PromptWars x NIAT Pune`)
+- **Goal:** Stage all project files cleanly (verifying zero ignored/secret files), commit with the hackathon title, and push to `origin/main`.
+- **Scope:** Entire repository (`25` tracked files, excluding `node_modules/`, `dist/`, `.env*`)
+- **Outcome:** Committed on `main` (`bcebd95` — `"Initial commit: Client-side PII Sanitizer for PromptWars x NIAT Pune"`) and pushed cleanly to `https://github.com/Himesh275/pii-shield-sanitizer.git`.
+
+---
+
+### Prompt 10 — GitHub Pages Production Deployment (`gh-pages`)
+- **Goal:** Configure `gh-pages` deployment scripts and publish the static `dist/` bundle to the `gh-pages` branch without committing `dist/` to `main`.
+- **Scope:** `vite.config.js`, `package.json`, `package-lock.json`, remote `gh-pages` branch
+- **Outcome:** Installed `gh-pages` as a `devDependency`, added `"predeploy": "npm run build"` and `"deploy": "gh-pages -d dist"` scripts, ran `npm run deploy`, and verified `refs/heads/gh-pages` published to `origin` with live URL `https://himesh275.github.io/pii-shield-sanitizer/`.
+
+---
+
+### Prompt 11 — Final Documentation Sync & Live Site Verification
+- **Goal:** Finalize `README.md` live demo link and `PROMPT_LOG.md`, push documentation updates to `main`, and verify the live GitHub Pages deployment end-to-end in the browser.
+- **Scope:** `README.md`, `PROMPT_LOG.md`, `package.json`, `package-lock.json`, live verification at `https://himesh275.github.io/pii-shield-sanitizer/`
+- **Outcome:** Synced final docs and `gh-pages` tooling to `origin/main` with a clean working tree, and verified the live GitHub Pages site loads with zero 404/console errors, working 1-click sample sanitization, and zero external network calls during redaction.
+

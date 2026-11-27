@@ -1,6 +1,6 @@
 # PII Shield — Client-Side Data Sanitization Tool
 
-> **Live Demo URL:** [https://himesh275.github.io/pii-shield-sanitizer/](https://himesh275.github.io/pii-shield-sanitizer/) *(Enable GitHub Pages -> Source: **GitHub Actions** in repo settings)*
+> **Live Demo URL:** [https://himesh275.github.io/pii-shield-sanitizer/](https://himesh275.github.io/pii-shield-sanitizer/) *(100% Client-Side • Deployed on GitHub Pages)*
 
 ---
 
